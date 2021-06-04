@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  db:
+    build: db/
+    restart: always
+    ports:
+      - 5432:5432
+  
+  api:
+    build: . 
+    ports:
+      - 8888:8888
+
